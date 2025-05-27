@@ -1,0 +1,31 @@
+import google.generativeai as genai
+
+# Replace with your Gemini API key from https://makersuite.google.com
+genai.configure(api_key="AIzaSyCMIjtBB2SSUvVblR7EMiinYI1VnOtDVow")
+
+# Initialize Gemini model (chat style)
+model = genai.GenerativeModel('gemini-pro')
+chat = model.start_chat()
+
+print("💬 Gemini Healthcare Assistant\nType 'exit' to quit.\n")
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() in ['exit', 'quit']:
+        print("Goodbye!")
+        break
+
+    try:
+        response = chat.send_message(
+            f"""
+You are a helpful medical assistant.
+Never diagnose or prescribe. Remind users you're not a doctor.
+If it's an emergency or serious, advise visiting a hospital or calling emergency services.
+
+Q: {user_input}
+A:
+            """
+        )
+        print("Assistant:", response.text.strip())
+    except Exception as e:
+        print("Error:", e)
