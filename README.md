@@ -4,9 +4,9 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)
 [![Gemini](https://img.shields.io/badge/Gemini-2.5%20Pro-orange)](https://ai.google.dev/)
-[![tests](https://img.shields.io/badge/tests-20%20passed-brightgreen)](https://github.com/scar8969/ashptal_chatbotv1/actions)
+[![tests](https://img.shields.io/badge/tests-20%20passed-brightgreen)](https://github.com/scar8969/ashptal/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![CI](https://github.com/scar8969/ashptal_chatbotv1/actions/workflows/ci.yml/badge.svg)](https://github.com/scar8969/ashptal_chatbotv1/actions/workflows/ci.yml)
+[![CI](https://github.com/scar8969/ashptal/actions/workflows/ci.yml/badge.svg)](https://github.com/scar8969/ashptal/actions/workflows/ci.yml)
 
 ## Why this exists
 
@@ -57,7 +57,7 @@ refused and why.
 ## Project structure
 
 ```
-ashptal_chatbotv1/
+ashptal/
 ├── src/ashptal/
 │   ├── __init__.py     # public API
 │   ├── safety.py       # SafetyTriage — rule-based guardrail
