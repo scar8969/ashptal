@@ -1,6 +1,9 @@
+import os
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyC8YlNjae83qnN8vD5mZUZFAqcgOUwVIqo")
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY", ""))
+if not genai.api_key:
+    raise SystemExit("GEMINI_API_KEY environment variable not set. See README.")
 
 model = genai.GenerativeModel("models/gemini-2.5-pro-preview-05-06")
 chat = model.start_chat()

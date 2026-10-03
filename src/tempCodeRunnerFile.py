@@ -1,1 +1,0 @@
-https://makersuite.google.com
